@@ -1,2 +1,30 @@
 <app-toolbar></app-toolbar>
-<router-outlet></router-outlet>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <mat-card class="card-width">
+                <mat-card-content>
+                    <button mat-button><a routerLink="crear/identificacion-amenazas">Identificación amenazas</a></button>
+                    <mat-divider></mat-divider>
+                    <button mat-button><a routerLink="crear/vulnerabildad-personas">Vulnerabildad personas</a></button>
+                    <mat-divider></mat-divider>
+                    <button mat-button><a routerLink="crear/vulnerabildad-recursos">Vulnerabildad recursos</a></button>
+                    <mat-divider></mat-divider>
+                    <button mat-button><a routerLink="crear/vulnerabildad-sistemas-procesos">Vulnerabildad sistemas y procesos</a></button>
+                    <mat-divider></mat-divider>
+                    <button mat-button><a routerLink="crear/consolidado-nuevo">Consolidado nuevo</a></button>
+                    <mat-divider></mat-divider>
+                    <button mat-button><a routerLink="crear/formula">Formula</a></button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col">
+            <mat-card class="card-content">
+                <mat-card-content>
+                    <router-outlet></router-outlet>
+                </mat-card-content>
+            </mat-card>
+            
+        </div>
+    </div>
+</div>

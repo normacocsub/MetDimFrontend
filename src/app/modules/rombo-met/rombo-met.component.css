@@ -1,0 +1,14 @@
+.card-width{
+    width: 300px;
+    padding: 4px;
+}
+
+
+button{
+    width: 100%;
+}
+
+.card-content{
+    width: 900px;
+    height: 600px;
+}

@@ -1,0 +1,20 @@
+<mat-tab-group>
+    <mat-tab label="NATURALES">
+        <div class="d-flex p-2 justify-content-around align-content-center flex-wrap">
+            <app-card-danger-question *ngFor="let item of threats.naturales" [cardtitle]="item">
+            </app-card-danger-question>
+        </div>
+    </mat-tab>
+    <mat-tab label="TECNOLÓGICOS">
+        <div class="d-flex p-2 justify-content-around align-content-center flex-wrap">
+            <app-card-danger-question *ngFor="let item of threats.tecnologicos" [cardtitle]="item">
+            </app-card-danger-question>
+        </div>
+    </mat-tab>
+    <mat-tab label="SOCIALES">
+        <div class="d-flex p-2 justify-content-around align-content-center flex-wrap">
+            <app-card-danger-question *ngFor="let item of threats.sociales" [cardtitle]="item">
+            </app-card-danger-question>
+        </div>
+    </mat-tab>
+</mat-tab-group>

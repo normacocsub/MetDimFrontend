@@ -1,0 +1,30 @@
+<mat-card class="card-danger mb-4">
+    <mat-card-header>
+        <mat-card-title>{{cardtitle}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+        <form [formGroup]="options">
+            <mat-form-field class="example-full-width">
+                <mat-label>FUENTE DE RIESGO</mat-label>
+                <textarea matInput ></textarea>
+            </mat-form-field>
+            <mat-form-field appearance="fill" [hideRequiredMarker]="hideRequiredControl.value"
+                [floatLabel]="getFloatLabelValue()">
+                <mat-select required>
+                    <mat-option>Seleccioné...</mat-option>
+                    <mat-option value="Posible">Posible</mat-option>
+                    <mat-option value="Probable">Probable</mat-option>
+                    <mat-option value="Inminente">Inminente</mat-option>
+                </mat-select>
+                <mat-label>
+                    CALIFICACIÓN 
+                </mat-label>
+            </mat-form-field>
+            <mat-radio-group aria-label="Select an option" [formControl]="floatLabelControl">
+                <mat-radio-button value="1">Interno</mat-radio-button>
+                <mat-radio-button value="2">Externo</mat-radio-button>
+            </mat-radio-group>
+        </form>
+
+    </mat-card-content>
+</mat-card>
