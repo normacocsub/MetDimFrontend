@@ -1,0 +1,149 @@
+<div class="p-2">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        ¿Que es la metodologia rombo?
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      Es una metodología de análisis de riesgos por colores, de una forma general y cualitativa
+      permitedesarrollar análisis de amenaza y vulnerabilidad a personas, recursos y sistemas y procesos, conel fin de
+      determinar el nivel de riesgo a través de la combinación de las variables anteriores concódigos de colores. Así
+      mismo aporta elementos de prevención y mitigación de los riesgos yatención efectiva de los eventos que la
+      Organización pueda generar, los cuales constituirán la basepara formular los planes de acción.
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="p-2">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Analisis de amenazas</mat-card-title>
+      <mat-card-subtitle>Primer paso</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      Es necesario categorizar los tipos de amenaza a identificar con el fin de tener el panorama
+      completo de las posibles amenazas que puedan afectar a la organización.
+      <br>
+      Estas categorías, sin ser restrictivo, pueden estar enmarcadas en las siguientes:
+      <mat-grid-list cols="3" rowHeight="3:1">
+        <mat-grid-tile>
+          Natural
+          <mat-list role="list">
+            <mat-list-item role="listitem">• Fenómenos de remoción en masa</mat-list-item>
+            <mat-list-item role="listitem">• Movimientos sísmicos</mat-list-item>
+            <mat-list-item role="listitem">• Inundación</mat-list-item>
+          </mat-list>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          Tecnologico
+          <mat-list role="list">
+            <mat-list-item role="listitem">• Incendios</mat-list-item>
+            <mat-list-item role="listitem">• Explosiones</mat-list-item>
+            <mat-list-item role="listitem">• Fugas</mat-list-item>
+          </mat-list>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          Social
+          <mat-list role="list">
+            <mat-list-item role="listitem">• Hurtos</mat-list-item>
+            <mat-list-item role="listitem">• Asaltos</mat-list-item>
+            <mat-list-item role="listitem">• Secuestros</mat-list-item>
+          </mat-list>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="p-2">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Análisis de vulnerabilidad</mat-card-title>
+      <mat-card-subtitle>Segundo paso</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      El análisis de vulnerabilidad se va a realizar a tres elementos expuestos, cada uno de ellos analizado desde tres
+      aspectos.
+      <mat-grid-list cols="3" rowHeight="3:1">
+        <mat-grid-tile>
+          Personas
+          <mat-list role="list">
+            <mat-list-item role="listitem">• Organización</mat-list-item>
+            <mat-list-item role="listitem">• Capacitación</mat-list-item>
+            <mat-list-item role="listitem">• Características de seguridad</mat-list-item>
+          </mat-list>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          Recursos
+          <mat-list role="list">
+            <mat-list-item role="listitem">• Materiales</mat-list-item>
+            <mat-list-item role="listitem">• Edificación</mat-list-item>
+            <mat-list-item role="listitem">• Equipos</mat-list-item>
+          </mat-list>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          Sistemas y procesos
+          <mat-list role="list">
+            <mat-list-item role="listitem">• Servicios públicos</mat-list-item>
+            <mat-list-item role="listitem">• Sistemas alternos</mat-list-item>
+            <mat-list-item role="listitem">• Recuperación</mat-list-item>
+          </mat-list>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="p-2">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Calificación de las variables</mat-card-title>
+      <mat-card-subtitle>Interpretación de la calificación para cada respuesta</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="Respuesta">
+          <th mat-header-cell *matHeaderCellDef> CRITERIO DE RESPUESTA </th>
+          <td mat-cell *matCellDef="let element"> {{element.respuesta}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Interpretacion">
+          <th mat-header-cell *matHeaderCellDef> INTERPRETACION </th>
+          <td mat-cell *matCellDef="let element"> {{element.interpretacion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Calificacion">
+          <th mat-header-cell *matHeaderCellDef> CALIFICACION </th>
+          <td mat-cell *matCellDef="let element"> {{element.calificacion}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>
+<div class="p-2">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Calificación de la vulnerabilidad</mat-card-title>
+      <mat-card-subtitle>Interpretación de la vulnerabilidad total por cada elemento</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="dataSource2">
+        <ng-container matColumnDef="Rango">
+          <th mat-header-cell *matHeaderCellDef> CRITERIO DE RESPUESTA </th>
+          <td mat-cell *matCellDef="let element"> {{element.rango}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Interpretacion">
+          <th mat-header-cell *matHeaderCellDef> INTERPRETACION </th>
+          <td mat-cell *matCellDef="let element"> {{element.interpretacion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="Color">
+          <th mat-header-cell *matHeaderCellDef> COLOR </th>
+          <td mat-cell *matCellDef="let element">
+            {{element.color}}
+            <img [src]="element.image" with="40px" height="40px">
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>
